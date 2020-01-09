@@ -1,0 +1,16 @@
+<a href="{%url 'homeURLName'%}">Go to Homepage</a>
+<form action = "{%url 'aboutURLName'%}">
+  <br>
+  <input type = "submit" value = "About Me"></input>
+</form>
+<h1>Their are {{CountKey}} words in your text</h1>
+<br>
+<h1>Your Text</h1>
+<br>
+{{fullTextKey}}
+<h1>Word Dictionary:</h1>
+<br>
+{%for wordKey, countValue in sortedWordDictionaryKey%}
+{{wordKey}} - {{countValue}}
+<br>
+{%endfor%}
